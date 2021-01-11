@@ -7,6 +7,7 @@
   --darkGrayMagenta: hsl(303, 10%, 53%);
   --lightGrayMagenta: hsl(300, 24%, 96%);
   --white: hsl(0, 0%, 100%);
+  --starOrange: hsl(28, 84%, 61%);
 }
 
 * {
@@ -29,8 +30,65 @@ body {
   display: grid;
   grid-template-rows: 1fr 1fr;
   justify-self: center;
-  border: 4px dotted var(--darkMagenta);
 }
+
+/* First Section */
+.first-section {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.main-banner {
+  color: var(--darkMagenta);
+  max-width: 435px;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.section-description {
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+.rating {
+  align-items: center;
+  background-color: var(--lightGrayMagenta);
+  border-radius: 10px;
+  color: var(--darkMagenta);
+  display: flex;
+  font-weight: bold;
+  height: 56px;
+  margin: 10px;
+  width: 445px;
+}
+
+.rating span,
+.rating p {
+  margin-left: 30px;
+}
+
+.rating p {
+  font-size: 12px;
+}
+
+.rating i {
+  color: var(--starOrange);
+  margin-right: 5px;
+}
+
+.rating-2 {
+  margin-left: 40px;
+}
+
+.rating-3 {
+  margin-left: 70px;
+}
+
 
 /* Review Cards */
 .reviews {
@@ -95,7 +153,7 @@ body {
     left: 0;
     right: 0;
     margin: auto;
-    bottom: 20px;
+    top: 5px;
 }
 
 .attribution a {
@@ -105,11 +163,39 @@ body {
 /* Media Queries */
 
 @media only screen and (max-width: 1150px) {
+  .first-section {
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .rating-2 {
+    margin-left: 10px;
+  }
+
+  .rating {
+    flex-direction: column;
+    height: 80px;
+    justify-content: center;
+  }
+
+  .rating span {
+    margin-bottom: 10px;
+  }
+  
+  .rating-3 {
+    margin-left: 10px;
+  }
+
   .card-2 {
     margin-top: 10px;
   }
   
   .card-3 {
     margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .rating {
+    width: 80vw;
   }
 }
