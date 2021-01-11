@@ -21,7 +21,7 @@ body {
   background-repeat: no-repeat;
   display: grid;
   min-height: 100vh;
-  min-width: 100%;
+  min-width: 100vw;
 }
 
 .container {
@@ -33,19 +33,59 @@ body {
 }
 
 /* Review Cards */
+.reviews {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+}
 .review-card {
   background-color: var(--darkMagenta);
+  border-radius: 10px;
   color: var(--white);
-  max-width: 350px;
+  height: 220px;
+  margin: 10px;
+  width: 350px;
 }
 
 .reviewer-profile {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: left;
+  align-items: center;
+  display: flex;
+  margin: 30px;
 }
 
+.reviewer-details p,
+.review {
+  font-size: 12px;
+}
 
+.reviewer-name {
+  margin-bottom: 4px;
+}
+
+.reviewer-type {
+  color: var(--softPink);
+}
+
+.avatar {
+  border-radius: 50%;
+  margin-right: 20px;
+  max-width: 40px;
+}
+
+.review {
+  line-height: 1.8;
+  margin: auto 30px;
+}
+
+.card-2 {
+  margin-top: 25px;
+}
+
+.card-3 {
+  margin-top: 40px;
+}
 /* Attribution Section */
 
 .attribution {
@@ -60,4 +100,16 @@ body {
 
 .attribution a {
   color: var(--darkMagenta);
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1150px) {
+  .card-2 {
+    margin-top: 10px;
+  }
+  
+  .card-3 {
+    margin-top: 10px;
+  }
 }
